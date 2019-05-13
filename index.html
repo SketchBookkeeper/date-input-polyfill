@@ -39,6 +39,10 @@
       <input class="date-polyfill" type="text" lang="test" date-format="mm/dd/yyyy" />
     </p>
 
+    <p>
+      Via API
+      <input id="api-el" type="date">
+    </p>
 
     <p id="dynamic" style="margin-top: 25%; margin-left: 25%;">
       dynamically created:
@@ -52,6 +56,13 @@
     </p>
 
     <script src="date-input-polyfill.dist.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const dateField = document.querySelector('#api-el');
+        window.datePicker(dateField);
+      })
+    </script>
 
   </body>
 </html>
